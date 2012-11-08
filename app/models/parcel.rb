@@ -1,4 +1,4 @@
-class Garden
+class Parcel
   include Mongoid::Document
   include Mongoid::Timestamps
   include Gmaps4rails::ActsAsGmappable

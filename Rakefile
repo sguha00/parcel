@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Parcel::Application.load_tasks
+ParcelApp::Application.load_tasks

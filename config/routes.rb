@@ -1,10 +1,10 @@
-Parcel::Application.routes.draw do
+ParcelApp::Application.routes.draw do
 
   match 'auth/:provider/callback', to: 'authentications#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'authentications#destroy', as: 'signout'
 
-  resources :gardens
+  resources :parcels
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +55,7 @@ Parcel::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'gardens#index'
+  root :to => 'parcels#index'
 
   # See how all your routes lay out with "rake routes"
 

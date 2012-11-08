@@ -1,10 +1,10 @@
 <div class="row">
 <div class="span3 offset1">
-  <h4>About your garden</h4>
+  <h4>About your parcel</h4>
 </div>
   
 </div>
-<%= simple_form_for @garden, :html => {:class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @parcel, :html => {:class => 'form-horizontal' } do |f| %>
   <%= f.input :title %>
   <%= f.input :address %>
   <%= f.input :description, :as => :text, :input_html => {
@@ -14,6 +14,6 @@
   :cols => 500 } %>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), gardens_path, :class => 'btn' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), parcels_path, :class => 'btn' %>
   </div>
 <% end %>

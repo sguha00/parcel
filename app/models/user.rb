@@ -10,7 +10,7 @@ class User
 
   attr_protected :provider, :uid, :first_name, :email, :image, :oauth_token, :oauth_expires_at
 
-  has_many :gardens
+  has_many :parcels
 
   def self.from_omniauth(auth)
     user = where(auth.slice(:provider, :uid))
