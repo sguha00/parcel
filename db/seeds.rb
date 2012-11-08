@@ -6,6 +6,9 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
-Garden.create! title: "Marcels Parcel", address: "10419 Muller Underpass Boston MA 02116", description: "This one is actually a rooftop garden. We have a deck with lots of space and open access for whoever would like to grow herbs or small plants. The sunlight is amazing and will come down very well."
+u = User.create! first_name: "Marcel", email: "florencio_halvorson@breitenbergrunolfsdottir.com"
 
-User.create! first_name: "Marcel", email: "florencio_halvorson@breitenbergrunolfsdottir.com"
+Garden.create! title: "Marcels Parcel", address: "10419 Muller Underpass Boston MA 02116", description: "This one is actually a rooftop garden. We have a deck with lots of space and open access for whoever would like to grow herbs or small plants. The sunlight is amazing and will come down very well.", user: u
+
+
+
