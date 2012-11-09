@@ -3,6 +3,11 @@ class Garden
   include Mongoid::Timestamps
   include Gmaps4rails::ActsAsGmappable
 
+  before_validation(:on => :update) do
+    self.gmaps = !address_changed?
+    true
+  end
+  
   acts_as_gmappable :address => :address, :position => :position, :callback => :save_neighborhood
 
   field :title,        type: String
